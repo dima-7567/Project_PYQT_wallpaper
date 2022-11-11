@@ -135,9 +135,7 @@ class ImageParsing(MainPage):
                     font=font,
                     fill="#" + ('{:X}{:X}{:X}').format(*colour)
                 )
-                using_image.show()
                 using_image.resize((1920, 1080), Image.ANTIALIAS)
-                using_image.show()
 
                 using_image.save(f"images/{self.inquiry_}_{i}.png", format='PNG')
                 using_image.close()
