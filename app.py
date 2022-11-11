@@ -3,7 +3,7 @@ import random
 from ctypes import windll
 from PIL import Image, ImageFont, ImageDraw
 from PyQt5 import QtCore, QtWidgets
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtWidgets import QMainWindow, QAction, QFileDialog, QSystemTrayIcon, QStyle
 import sys
 
@@ -19,6 +19,7 @@ class Main(QMainWindow):
     def __init__(self):
         super().__init__()
         self.app = QtWidgets.QApplication(sys.argv)
+        self.setWindowIcon(QIcon('412755ac0d14cd854d590d3a82d61aee.ico'))
         self.setObjectName("MainWindow")
         self.resize(900, 700)
         self.setStyleSheet("font: 75 14pt \"Palatino Linotype\";\n"
@@ -68,7 +69,7 @@ class Main(QMainWindow):
 
     def re_translate(self):
         _translate = QtCore.QCoreApplication.translate
-        self.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.setWindowTitle(_translate("MainWindow", "Image Dictionary"))
         self.pushButton.setText(_translate("MainWindow", "Create wallpaper"))
         self.label_2.setText(_translate("MainWindow", "Input the word you would like to learn"))
 
